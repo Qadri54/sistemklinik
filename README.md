@@ -19,27 +19,35 @@ cd sistemklinik.
 ```
 
 ### 2. Install Dependency
+``` bash
 composer install
+```
 
 ### 3. Salin File Environment
+``` bash
 cp .env.example .env
+```
 
 ### 4. Atur Konfigurasi Database
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=sistemklinik
-DB_USERNAME=root
-DB_PASSWORD=
+DB_CONNECTION=mysql  
+DB_HOST=127.0.0.1  
+DB_PORT=3306  
+DB_DATABASE=sistemklinik  
+DB_USERNAME=root  
+DB_PASSWORD=  
 
 ### 5. buat database sistemklinik di phpmyadmin
 
 ### 6. Generate Key dan Migrate Database
-php artisan key:generate
+```bash
+php artisan key:generate  
 php artisan migrate --seed
+```
 
 ### 7. jalankan aplikasi
+```bash 
 php artisan serve
+```
 
 # akses aplikasi melalui
 http://127.0.0.1:8000
