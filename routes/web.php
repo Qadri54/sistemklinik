@@ -10,7 +10,7 @@ use App\Http\Controllers\ResepsionisController;
 use App\Http\Controllers\Konsultasi;
 
 Route::get('/', function () {
-    return view('landingpage');
+    return view('index');
 });
 
 
@@ -102,5 +102,3 @@ Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
 // Logout
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-
-// 
