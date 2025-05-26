@@ -17,7 +17,8 @@ return new class extends Migration
             $table->text('description');
             $table->enum('status_konsultasi', ['belum dimulai','diproses', 'selesai'])->default('belum dimulai'); //ini akan berubah setelah dokter merubah status
             $table->enum('status_pembayaran', ['unpaid', 'paid'])->default('unpaid'); //ini akan berubah setelah pasein melakukan pembayaran
-            $table->text('diagnosis')->nullable(); //ini akan diubah oleh dokter setelah pasien membuat konsultasi
+            $table->text('diagnosis')->nullable();  
+            $table->integer('price')->nullable(); //ini akan diubah oleh dokter setelah pasien membuat konsultasi
             $table->timestamps(); 
         });
     }

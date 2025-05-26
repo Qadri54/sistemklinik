@@ -36,6 +36,9 @@ return new class extends Migration {
                 'Patologi Klinik',
             ]);
             $table->string('license_number')->unique(); // No STR
+            $table->string('address');
+            $table->string('birth_date');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

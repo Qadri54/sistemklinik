@@ -62,9 +62,10 @@ http://127.0.0.1:8000
 | ----------- | ----------------------------------------------------- | -------- |
 | Admin       | [admin@gmail.com](mailto:admin@gmail.com)             | 123456   |
 | Resepsionis | [resepsionis@gmail.com](mailto:resepsionis@gmail.com) | 123456   |
+| Dokter      | [dokter@gmail.com](mailto:resepsionis@gmail.com)      | 123456   |
+| pasien      | [ujang@gmail.com](mailto:resepsionis@gmail.com)       | 123456   |
 
-### jika ingin membuat dokter anda bisa melalui admin
-### jika ingin membuat pasien bisa melalui register
+### sekarang pasien dan dokter sudah tersedia
 
 # selamat menikmati sistemnya 😊 #
 

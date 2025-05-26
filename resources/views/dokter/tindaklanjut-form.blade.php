@@ -9,7 +9,7 @@
 
     <body class="bg-gray-100 min-h-screen">
 
-        <header class="bg-blue-600 text-white p-4 flex items-center justify-between">
+        <header class="bg-teal-700 text-white p-4 flex items-center justify-between">
             <h1 class="text-2xl font-semibold">Selamat datang dokter {{ Auth::user()->name }}</h1>
             <a type="submit" href="{{ route('logout') }}"
                 class="bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded transition">
@@ -50,11 +50,17 @@
 
                         <div class="mb-4">
                             <label class="block font-medium text-gray-700">Status Konsultasi</label>
-                            <select name="status_konsultasi" class="w-full border px-3 py-2 rounded" required>
+                            <select name="status_konsultasi" class="w-full border px-3 py-2 rounded">
                                 <option value="belum dimulai" {{ $konsultasi->status_konsultasi == 'belum dimulai' ? 'selected' : '' }}>belum dimulai</option>
                                 <option value="diproses" {{ $konsultasi->status_konsultasi == 'diproses' ? 'selected' : '' }}>diproses</option>
                                 <option value="selesai" {{ $konsultasi->status_konsultasi == 'selesai' ? 'selected' : '' }}>selesai</option>
                             </select>
+                        </div>
+
+                         <div class="mb-4">
+                            <label class="block font-medium text-gray-700">price</label>
+                            <input type="text" name="price" class="w-full border px-3 py-2 rounded bg-gray-100" placeholder="masukkan harga yang sesuai"
+                                >{{ $konsultasi->price }}</input>
                         </div>
 
                         <div class="text-right">

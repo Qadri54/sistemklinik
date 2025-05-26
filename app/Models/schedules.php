@@ -16,8 +16,11 @@ class schedules extends Model {
     ];
 
     public function consultation() {
-        return $this->belongsTo(consultations::class, 'consultation_id');
+        return $this->belongsTo(consultations::class);
     }
 
+    public function doctor() {
+        return $this->belongsTo(doctors::class);
+    }
 
 }

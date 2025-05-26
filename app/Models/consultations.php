@@ -14,6 +14,7 @@ class consultations extends Model {
         'status_pembayaran',
         'status_konsultasi',
         'diagnosis',
+        'price',
     ];
     public function patient() {
         return $this->belongsTo(patients::class);

@@ -24,8 +24,8 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/profil/update', [PasienController::class, 'update'])->name('profil-pasien.update');
 
         // membuat konsultasi pasein
-        Route::get('/konsultasi-pasien', [PasienController::class, 'dashboard'])->name('konsultasi.pasien');
-        Route::post('/konsultasi', [Konsultasi::class, 'store'])->name('konsultasi-pasien');        
+        Route::get('/konsultasi-pasien', [Konsultasi::class, 'index'])->name('buatjanji');
+        Route::post('/konsultasi', [Konsultasi::class, 'storepasien'])->name('konsultasi-pasien-online');
 
         //list jadwal konsultasi pasien
         Route::get('/jadwal-konsultasi', [PasienController::class, 'jadwalKonsultasi'])->name('jadwal.konsultasi');
@@ -41,7 +41,9 @@ Route::middleware(['auth'])->group(function () {
 
         // konsultasi
         Route::get('/konsultasi', [ResepsionisController::class, 'getAllScheduls'])->name('dashboard.konsultasi');
-        Route::get('/scheduls', [ResepsionisController::class, 'createScheduls'])->name('dashboard.view.scheduls');
+        Route::post('/konsultasi', [Konsultasi::class, 'store'])->name('konsultasi-pasien');
+
+        Route::get('/scheduls', [Konsultasi::class, 'create'])->name('dashboard.view.scheduls');
 
         //view create resepsionis
         Route::get('/resepsins', [AdminController::class, 'create_resepsionis'])->name('dashboard.view.resepsionis');
@@ -58,6 +60,13 @@ Route::middleware(['auth'])->group(function () {
     Route::prefix('dokter')->group(function () {
 
         Route::get('/dashboard', [DokterController::class, 'dashboard'])->name('dashboard.dokter');
+
+        // route untuk jadwal yang telah selesai
+        Route::get('/jadwal-selesai', [DokterController::class, 'jadwalSelesai'])->name('jadwal.selesai');
+
+        // profile dokter
+        Route::get('/profile', [DokterController::class, 'profile'])->name('profile.dokter');
+        Route::put('/profile', [DokterController::class, 'updateProfile'])->name('update.dokter');
 
         // Route untuk tindak lanjut (contoh untuk ke halaman detail konsultasi atau form diagnosis)
         Route::get('/dokter/konsultasi/{id}/tindaklanjut', [DokterController::class, 'showTindakLanjutForm'])->name('dokter.tindaklanjutedit.form');

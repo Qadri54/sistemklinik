@@ -19,4 +19,12 @@ class doctors extends Model {
         return $this->belongsTo(User::class);
     }
 
+    public function consultations() {
+        return $this->hasMany(consultations::class);
+    }
+
+    public function schedules() {
+        return $this->hasMany(schedules::class);
+    }
+
 }

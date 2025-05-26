@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->date('birth_date');
             $table->text('address')->nullable();
+            $table->string('image')->nullable();
             $table->enum('tipe', ['online', 'offline']);
             $table->timestamps();
         });

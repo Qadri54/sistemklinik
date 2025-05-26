@@ -35,6 +35,9 @@
     <p class="mt-4 text-center text-sm text-gray-600">
       Belum punya akun? <a href="{{ route('register') }}" class="text-blue-600 hover:underline">Daftar disini</a>
     </p>
+    <p class="text-center text-sm text-gray-600">
+      kembali ke halaman <a href="/" class="text-blue-600 hover:underline">sebelumnya</a>
+    </p>
   </div>
 
 </body>
