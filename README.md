@@ -14,7 +14,7 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek ini secara lokal:
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/username/sistemklinik.git
+git clone https://github.com/Qadri54/sistemklinik.git
 cd sistemklinik.
 ```
 
@@ -44,7 +44,12 @@ php artisan key:generate
 php artisan migrate --seed
 ```
 
-### 7. jalankan aplikasi
+### 7. buat storage link untuk menghubungkan 
+```bash
+php artisan storage:link
+```
+
+### 8. jalankan aplikasi
 ```bash 
 php artisan serve
 ```
