@@ -44,7 +44,7 @@ php artisan key:generate
 php artisan migrate --seed
 ```
 
-### 7. buat storage link untuk menghubungkan 
+### 7. buat storage link untuk menghubungkan gambar
 ```bash
 php artisan storage:link
 ```
