@@ -92,7 +92,7 @@ Route::middleware(['auth'])->group(function () {
         // Dokter
         Route::get('/doctors', [AdminController::class, 'getAllDoctors'])->name('admin.doctors');
         Route::get('/add/doctors', [AdminController::class, 'createdokter'])->name('admin.create.doctors');
-        Route::post('/add/doctors', [AdminController::class, 'store_dokter'])->name('admin.create.doctors');
+        Route::post('/add/doctors', [AdminController::class, 'store_dokter'])->name('admin.add.doctors');
         Route::post('/doctors/{id}', [AdminController::class, 'delete_dokter'])->name('admin.doctors.delete');
 
         // Jadwal Konsultasi
